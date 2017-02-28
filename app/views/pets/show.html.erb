@@ -1,0 +1,45 @@
+<!--PET PROFILE PAGE!-->
+<% provide(:title, @pet.name) %>
+<%= render 'layouts/header' %>
+
+<div class="text-center" style="margin-bottom: 10px">
+  <% if @pet.avatar? %>
+    <div id="petlistpic"<%= link_to image_tag(@pet.avatar.url, size: "120", class: "img-circle"), @pet %></div>
+    <div class="petnamelabel" <h3><strong><%= @pet.name %></strong></h3></div>
+  <% end %>
+</div>
+
+<!--pet info!-->
+<div class="center profilecard">
+
+  <strong>Name: </strong>
+  <%= @pet.name %>
+  <br>
+
+  <strong>Owner: </strong>
+  <%= @pet.user.name %>
+  <br>
+
+  <strong>Birthday: </strong>
+  <%= @pet.birthday %>
+  <br>
+
+  <strong>Gender: </strong>
+  <%= @pet.gender %>
+  <br>
+
+  <strong>Animal Type: </strong>
+  <%= @pet.animal_type %>
+
+  <strong>Breed: </strong>
+  <%= @pet.breed %>
+  <br>
+
+  <strong>Bio: </strong>
+  <%= @pet.bio %>
+
+</div>
+
+<%= link_to 'Edit', edit_pet_path(@pet) %>
+
+<%= render 'layouts/footer' %>

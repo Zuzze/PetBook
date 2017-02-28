@@ -1,0 +1,40 @@
+<%= render 'layouts/header' %>
+<div align="center" class=row>
+
+<h1>Notifications</h1>
+
+<!--Picture-->
+       <div align="center" id="newspic" class="category">
+               <img src="https://i.ytimg.com/vi/sIrP1t_PxcQ/maxresdefault.jpg" />
+      </div>
+
+	<table id="notification_table" align="center">
+		<tr>
+			<td><%= gravatar_for current_user, size: 50 %><td>
+			<td>You commented on John's post</td>
+		</tr>
+		<tr>
+			<td><%= gravatar_for current_user, size: 50 %><td>
+			<td>You commented on Mary's post</td>
+		</tr>
+		<tr>
+			<td><%= gravatar_for current_user, size: 50 %><td>
+			<td>You commented on Amy's post</td>
+		</tr>
+		<tr>
+			<td><%= gravatar_for current_user, size: 50 %><td>
+			<td>You liked Amy's post</td>
+		</tr>
+		<tr>
+			<td><%= gravatar_for current_user, size: 50 %><td>
+			<td>You commented on Amy's post</td>
+		</tr>
+		<tr>
+			<td><%= gravatar_for current_user, size: 50 %><td>
+			<td>You commented on Amy's post</td>
+		</tr>
+	</table>
+
+	</div>
+
+  <%= render 'layouts/footer' %>

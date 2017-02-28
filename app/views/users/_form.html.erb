@@ -1,0 +1,17 @@
+<%= form_for(@user) do |f| %>
+  <%= render 'shared/error_messages', object: f.object  %>
+
+  <%= f.label :name %>
+  <%= f.text_field :name, class: 'form-control', placeholder:'Username shown on the website' %>
+
+  <%= f.label :email %>
+  <%= f.email_field :email, class: 'form-control', placeholder:'email shown on the website' %>
+
+  <%= f.label :password %>
+  <%= f.password_field :password, class: 'form-control', placeholder:'minimum 6 characters' %>
+
+  <%= f.label :password_confirmation %>
+  <%= f.password_field :password_confirmation, class: 'form-control', placeholder:'minimum 6 characters' %>
+
+  <%= f.submit "Sign up!", class: "btn btn-primary" %>
+<% end %>

@@ -1,0 +1,24 @@
+<!--HOME PAGE-->
+<%= render 'layouts/header' %>
+
+<div class="row">
+<h1 align="center">Home</h1>
+
+<!--Post form-->
+  <section id="form_post" align="center">
+    <div id=home_user_info>
+      <%= render 'shared/user_info' %>
+    </div>
+        <h3>Share your own story</h3>
+    <%= render 'shared/post_form' %>
+  </section>
+
+
+
+  <!--Newsfeed-->
+
+      <h3 align="center">Stories from the users you follow</h3>
+      <%= render 'shared/feed' %>
+  </div>
+
+<%= render 'layouts/footer' %>

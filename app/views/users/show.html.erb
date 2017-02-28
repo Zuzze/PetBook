@@ -1,0 +1,53 @@
+<!--USER PROFILE PAGE-->
+
+<% provide(:title, @user.name) %>
+<%= render 'layouts/header' %>
+
+<!--user info!-->
+<div class="row">
+  <aside class="col-md-4">
+      <h1><%= @user.name %></h1>
+      <div align="center", id="usermail"><%= @user.email %></div>
+    <section id="userinfopanel", class="user_info">
+      <div align="center", id="userpic"><%= gravatar_for @user %></div>
+      <div align="center", id="userstats"><%= render 'shared/stats' %></div>
+    </section>
+
+<!--edit user info (show only if own profile)-->
+<% if current_user?(@user) %>
+    <div align="center", id="edit_user_btn", ><%= link_to 'Edit user profile', edit_user_path(@user), class: "btn" %></div>
+  <% end %>
+
+<!--PETS!-->
+<!--pet list info!-->
+<!--@TODO-if no pet photo, no link -> fix this -->
+  <section>
+    <div id="pet_list">
+    <h2> Pets </h2>
+    <ol class="pets">
+      <%= render @pets %>
+    </ol>
+  </div>
+  </section>
+  <% if current_user?(@user) %>
+
+  <!--add new pet (show only if own profile)-->
+  <div align="center", id="addpet_btn"><%= link_to 'Add new pet', addpet_path, class:"btn" %></div>
+  <% end %>
+
+</aside>
+
+<!--POSTS!-->
+  <div class="col-md-8">
+    <%= render 'follow_form' if logged_in? %>
+    <% if @user.posts.any? %>
+      <h3 align="center">Posts (<%= @user.posts.count %>)</h3>
+      <ol class="posts">
+        <%= render @posts %>
+      </ol>
+      <%= will_paginate @posts %>
+    <% end %>
+  </div>
+</div>
+
+<%= render 'layouts/footer' %>

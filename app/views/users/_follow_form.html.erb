@@ -1,0 +1,10 @@
+<!--FOLLOWING PANEL ON USER PROFILE PAGE-->
+<% unless current_user?(@user) %>
+  <div id="follow_form", align="right">
+  <% if current_user.following?(@user) %>
+    <%= render 'unfollow' %>
+  <% else %>
+    <%= render 'follow' %>
+  <% end %>
+  </div>
+<% end %>

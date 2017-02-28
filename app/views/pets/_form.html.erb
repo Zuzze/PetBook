@@ -1,0 +1,59 @@
+<%= form_for(pet, html: {multipart: true}) do |f| %>
+  <% if pet.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(pet.errors.count, "error") %> prohibited this pet from being saved:</h2>
+
+      <ul>
+      <% pet.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %> 
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name, class: 'form-control' %>
+  </div>
+  <div class="field">
+    <%= f.label :type %>
+    <%= f.text_field :animal_type, class: 'form-control' %>
+  </div>
+  <div class="field">
+    <%= f.label :breed %>
+    <%= f.text_field :breed, class: 'form-control' %>
+  </div>
+  <div class="field">
+    <%= f.label :gender %>
+    <%= f.select(:gender, [['Male','m'],['Female','f']]) %>
+  </div>
+  <div class="field">
+    <%= f.label :birthday %>
+    <%= f.text_field :birthday, class: 'datepicker ', id: 'll-skin-melon', value: Date.today %>
+    <script>
+      $.fn.datepicker.defaults.format = "yyyy-mm-dd";
+      $('.datepicker').datepicker({
+        format: 'yyyy-mm-dd'
+      });
+    </script>
+
+  </div>
+
+  <div class="field">
+    <%= f.label :bio %>
+     <%= f.text_area :bio, class: 'form-control' %>
+  </div>
+
+
+  
+  <div class="avatar">
+    <%= f.label :avatar %><br>
+    <%= f.file_field :avatar %>
+  </div>
+
+
+
+  <div class="actions">
+    <%= f.submit "submit", class: 'btn btn-primary'%>
+  </div>
+<% end %>

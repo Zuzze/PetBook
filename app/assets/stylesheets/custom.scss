@@ -1,0 +1,888 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+
+/* universal */
+
+body {
+  margin: 70px !important;
+  padding: 50px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  background-color: #E8D6D3 !important;
+  box-shadow: 2px 10px 43px 0px rgba(0,0,0,0.75);
+  min-width:600px; /* suppose you want minimun width of 1000px */
+}
+
+html {
+  background: url("https://blog.vendordb.com/wp-content/uploads/2014/08/fur.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-color: #E8D6D3 !important;
+}
+
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.center {
+  text-align: center;
+}
+
+.center h1 {
+  margin-bottom: 10px;
+}
+
+.petbook_link:hover {
+  background-color: transparent !important;
+  color: black;
+  text-decoration: underline;
+}
+
+/* typography */
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+}
+
+h1 {
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.1em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  color: #777;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.7em;
+}
+
+//LINKS
+a {
+background-color: transparent;
+font-size: 1.2em;
+}
+
+a:hover {
+  background-color: transparent !important;
+  color: black;
+  font-size: 1.2em;
+}
+
+a:visited {
+background-color: transparent !important;
+color:grey !important;
+}
+
+
+
+/* responsiviness */
+@media only screen and (max-width: 992px) {
+    .navbar-right {
+      display: none;
+    }
+    .navbar-narrow{
+    position: relative;
+    display: inline-block;
+    margin-top: 10px;
+    img {
+      width:60px;
+      height:50px;
+      float:right;
+    }
+    color: grey;
+     .navbar-narrow-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      padding: 12px 16px;
+     }
+  }
+  .navbar-narrow:hover .navbar-narrow-content{
+    display: block;
+  }
+
+  .grid_picture {
+    position: relative;
+    width: 400px !important;
+    height: 400px !important;
+    img {
+    width: 400px !important;
+    height: 400px !important;
+  }
+  }
+
+  .imgDescription {
+    width: 400px !important;
+    height: 400px !important;
+    padding-top: 80px !important;
+    padding-bottom: 5px !important;
+    font-size: 2em !important;
+    img {
+      width:100px !important;
+      height: 100px !important;
+    }
+  }
+
+    #likebtn1 {
+      width: 300px;
+      height: 70px;
+      background-size: 35px 35px;
+      background-position: 50px;
+    }
+}
+
+
+@media only screen and (min-width: 992px) {
+    .navbar-right {
+      display:block;
+      font-size: 0.8em;
+    }
+    .navbar-narrow{
+    display: none;
+  }
+
+  #explorediv {
+    margin-left: 10%;
+  }
+
+}
+
+/* header */
+header {
+  min-width: 600px;
+}
+
+/* search */
+.searchwrap{
+  width: 100%;
+}
+.searchbutton {
+  width: 25px;
+  height: 25px;
+  background-image: url('search.png');
+  background-size: 25px 25px;
+  background-position: 2px;
+  background-repeat: no-repeat;
+  display:inline;
+  background-color: transparent;
+  border: 0;
+  padding-top: 10px;
+}
+
+.search-form {
+  display: inline-block;
+  float:left;
+  height:34px;
+  width: 60%;
+  margin-top: 22px;
+  border: 0;
+  background: transparent;
+  margin-left:40px;
+
+}
+
+.search-bar {
+    height: 25px;
+    width: 80%;
+    font-size: 1.2em;
+    text-align: left;
+    color: grey;
+    padding-bottom: 0px;
+    padding-top: 0;
+    padding-left: 10px;
+    border: 0;
+    border-radius: 20px;
+
+}
+
+
+.search-bar:focus {
+color: black;
+border: 0px;
+}
+
+#headerleftwrap {
+  display: inline;
+}
+
+#headerrightwrap {
+  align:right;
+  list-style-type: none;
+}
+
+
+#logo {
+  display: inline-block;
+  float: left;
+  margin-right: 10px;
+  font-size: 1.7em;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
+}
+
+#logo:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+#navtext{
+  font-size: 1.2em;
+  color: white !important;
+  padding-top: 10px;
+}
+#navtext:hover {
+  color: #E8D6D3 !important;
+}
+
+/* body */
+.center_img{
+  display: block;
+  margin: 0 auto;
+}
+.jumbotron{
+  background-color: #ffffff !important;
+}
+
+
+/* sign up */
+#new_user {
+  .btn-primary {
+    margin-top: 5%;
+    margin-left: 40%;
+    margin-right: 40%;
+  }
+}
+
+#signuppic > img {
+  width: 100%;
+  margin-bottom: 5%;
+  margin-top: 5%;
+  border-radius: 50px;
+  box-shadow: 2px 10px 43px 0px rgba(0,0,0,0.75);
+}
+
+#error_explanation {
+  width: 100% !important;
+  border-color: transparent !important;
+  box-shadow: 2px 10px 43px 0px rgba(0,0,0,0.75);
+  margin: auto;
+}
+
+.field_with_errors {
+  background-color: transparent !important;
+  padding: 2%;
+}
+
+/* login page */
+#loginpic > img {
+  width: 50%;
+  margin-bottom: 5%;
+  margin-top: 5%;
+  border-radius: 50px;
+  box-shadow: 2px 10px 43px 0px rgba(0,0,0,0.75);
+}
+
+
+.btn.btn-primary.login {
+  margin-left:40%;
+}
+
+/* footer */
+
+
+footer {
+  width: 80%;
+  margin-top: 45px;
+  padding-top: 5px;
+  padding-bottom: 50px;
+  border-top: 1px solid #eaeaea;
+  border-top-width: 100%;
+  color: #777;
+}
+
+footer a {
+  color: #555;
+}
+
+footer a:hover {
+  color: white;
+  text-decoration: none;
+  padding: 15%;
+}
+
+footer small {
+  float: left;
+}
+
+footer ul {
+  float: right;
+  list-style: none;
+}
+
+footer ul li {
+  float: left;
+  margin-left: 15px;
+}
+
+
+/* mixins, variables, etc. */
+
+$gray-medium-light: #eaeaea;
+
+@mixin box_sizing {
+  -moz-box-sizing:    border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing:         border-box;
+}
+
+/* miscellaneous */
+
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  @include box_sizing;
+}
+
+/* forms */
+.checkbox {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  span {
+    margin-left: 20px;
+    font-weight: normal;
+  }
+}
+
+#session_remember_me {
+  width: auto;
+  margin-left: 0;
+}
+
+
+/* about page */
+
+.about {
+  margin-bottom: 30px;
+  img {
+    float:left;
+    width: 40%;
+    margin: 3%;
+    border-radius: 50px;
+  }
+  p {
+    font-size: 1.7em;
+    margin-top: 5%;
+    line-height: 1.2;
+  }
+
+  h2 {
+    padding-top: 5%;
+  }
+}
+
+#about1 {
+  height: 30%;
+  clear:both;
+}
+
+#about2 {
+  height: 30%;
+  clear:both;
+}
+
+#about3 {
+  height: 30%;
+  clear:both;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+
+/* Users index */
+
+.users {
+  list-style: none;
+  margin: 0;
+  li {
+    overflow: auto;
+    padding: 10px 0;
+    border-bottom: 1px solid $gray-lighter;
+  }
+}
+
+/* ----  home page ------------------- */
+#home_user_info {
+  img {
+    margin-top: 5px;;
+    width: 120px;
+  }
+  #Posts {
+    display: none;
+  }
+  h1 {
+    display: none;
+  }
+}
+
+/* ----  user profile page ------------------- */
+
+#userinfopanel {
+  background-color: white;
+  box-shadow: 2px 10px 43px 0px rgba(0,0,0,0.75);
+  padding: 10%;
+  padding-bottom: 15%;
+  margin: 5%;
+  margin-bottom: 10%;
+}
+
+#userpic > img {
+  width: 80%;
+  margin-bottom: 10%;
+}
+
+#usermail {
+  padding: 0%;
+  font-size: 1.5em;
+}
+
+
+
+/* ----  posts ----------------------------- */
+
+.posts {
+  list-style: none;
+  padding: 0;
+  li {
+    padding: 10px 0;
+    border-top: 1px solid #e8e8e8;
+  }
+  .user {
+    margin-top: 5em;
+    padding-top: 0;
+  }
+  .content {
+    display: block;
+    margin-left: 40px;
+    margin-right: 40px;
+    img {
+      display: block;
+      padding: 5px 0;
+    }
+  }
+  .timestamp {
+    color: $gray-light;
+    display: block;
+    margin-left: 40px;
+    margin-bottom: 5%;
+  }
+  .gravatar {
+    float: left;
+    margin-right: 10px;
+    margin-top: 5px;
+  }
+}
+
+aside {
+  textarea {
+    height: 100px;
+    margin-bottom: 5px;
+  }
+}
+
+#post_content {
+  width: 100%;
+  margin-top: 20px;
+  height: 70px;
+  padding: 5px;
+  font-size: 1.1em;
+}
+
+//all post boxes containing all post data
+#post-title {
+  text-align: center;
+}
+
+
+[id^=post] {
+  background-color: white;
+  padding: 0%;
+  box-shadow: 2px 10px 43px 0px rgba(0,0,0,0.75);
+  max-width: 700px;
+  margin: auto;
+
+  .content > img{
+    width: 100%;
+    margin: auto;
+  }
+
+  .img-circle {
+    margin-left: 10%;
+    margin-bottom: 5%;
+    margin-top: 5%;
+    margin-right: 2%;
+  }
+
+  a {
+  background-color: white !important;
+  margin-bottom: 5%;
+  font-size: 1.1em;
+  }
+
+  a:hover {
+    background-color: white !important;
+    color: black;
+    margin-bottom: 5%;
+    font-size: 1.1em;
+  }
+
+//comment field
+div.field {
+  width:100%;
+}
+
+span.content {
+  font-size: 1.3em;
+}
+
+//user name
+.user a {
+  font-size: 1.4em;
+}
+
+}
+
+#post_picture {
+  background-color: transparent;
+  font-size: 1.3em;
+    box-shadow: 2px 10px 43px 0px rgba(0,0,0,0);
+    padding-top: 10px;
+    margin-left: 20%;
+}
+
+.post-btn {
+  float:right;
+  margin-right: 20%;
+}
+
+
+[id^=like] {
+margin-left: 60px;
+font-size: 1.2em;
+  width: 130px;;
+  height: 40px;
+  border-radius: 50px;
+  background-color: white;
+  background-image: url("http://www.clker.com/cliparts/R/h/P/e/p/U/pink-heart-hi.png");
+  background-position: 10px;
+  background-size: 25px 25px;
+  display:inline;
+  padding-left: 5%;
+  background-repeat: no-repeat;
+}
+
+span.picture {
+  margin-top: 10px;
+  input {
+    border: 0;
+  }
+}
+
+#form_post_div {
+width: 90%;
+
+}
+
+
+/* ----  follow others from profile page --------- */
+#follow_form.btn {
+  margin-left: 20px;
+
+}
+
+
+/* ----  following/followers page --------- */
+#following_page_stats {
+  margin-top: 5%;
+}
+
+
+/* ----  pets ----------------------------- */
+
+  /* Pet list */
+.pets {
+  list-style: none;
+  li {
+    padding: 10px 0;
+    border-top: 1px solid #e8e8e8;
+  }
+  .user {
+    margin-top: 5em;
+    padding-top: 0;
+  }
+  .content {
+    display: block;
+    margin-left: 60px;
+    img {
+      display: block;
+      padding: 5px 0;
+    }
+  }
+
+  .timestamp {
+    color: $gray-light;
+    display: block;
+    margin-left: 60px;
+  }
+  .gravatar {
+    float: left;
+    margin-right: 10px;
+    margin-top: 5px;
+  }
+}
+
+#pet_list {
+  width: 100%;
+  .img-circle{
+    width: 70px;
+    height: 70px;
+    margin-right: 5%;
+  }
+  .petinfo {
+    font-size: 1.3em;
+    font-weight: bold;
+  }
+  h2{
+    margin-top:10%;
+  }
+  a:hover {
+    background-color: transparent;
+  }
+}
+
+//Pet profile page
+
+
+aside {
+width: 100%;
+  textarea {
+    height: 100px;
+    margin-bottom: 5px;
+  }
+  textarea#post_content {
+    box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.0);
+  }
+
+input#post_picture {
+  box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.0);
+  background-color: transparent;
+}
+}
+
+span.picture {
+  margin-top: 10px;
+  input {
+    border: 0;
+  }
+}
+
+
+/* --------sidebar------------------------- */
+
+.gravatar {
+  float: left;
+  margin-right: 10px;
+}
+
+.gravatar_edit {
+  margin-top: 15px;
+}
+
+.stats {
+  overflow: auto;
+  align-content: center;
+  margin-top: 0;
+  padding: 0;
+  font-size: 0.9em;
+
+  a {
+    float:none;
+    display: inline;
+    padding: 5%;
+    border-left: 1px solid $gray-lighter;
+    color: gray;
+    &:first-child {
+      padding-left: 0;
+      border: 0;
+    }
+    &:hover {
+      text-decoration: none;
+      color: black;
+      background-color: transparent;
+    }
+  }
+}
+
+
+
+.user_avatars {
+  overflow: auto;
+  margin-top: 10px;
+  .gravatar {
+    margin: 1px 1px;
+  }
+  a {
+    padding: 0;
+  }
+}
+
+.users.follow {
+  padding: 0;
+}
+
+
+
+/*  buttons */
+
+.btn {
+  background-color: black !important;
+  border-color: black !important;
+  color: white !important;
+  font-size: 17px !important;
+}
+
+.btn:visited {
+  color: white !important;
+  background-color: black !important;
+  font-size: 17px !important;
+}
+
+.btn:hover {
+  color: grey !important;
+  background-color: black !important;
+  font-size: 17px !important;
+
+}
+
+
+#error_explanation {
+  width: 200px;
+}
+
+/*     profile card -----------------------------------*/
+.profilecard{
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background: #ffffff;
+  font-size: 14px;
+  font-family: sans-serif;
+  color: grey;
+  width: 400px;
+  margin:0 auto;
+  margin-top:20px;
+  border-radius: 14px;
+
+}
+
+/*-----follow--------------------------*/
+#followbtn {
+
+}
+
+/*-----explore page--------------------------*/
+
+.grid_picture {
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+
+.col-md-3 {
+  margin: 5px;
+}
+
+.imgDescription {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.72);
+  color: black;
+  visibility: hidden;
+  opacity: 0;
+  width: 200px;
+  height: 200px;
+  margin-left:20px;
+  margin-top:20px;
+  padding-top:40px;
+
+  #likebtn1 {
+    margin-left: 10px;
+    margin-top: 20px;
+  }
+
+  /*remove comment if you want a gradual transition between states*/
+  -webkit-transition: visibility opacity 0.2s;
+}
+
+.explorename {
+  font-size: 1.3em;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.grid_picture:hover .imgDescription {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+/* CONTACT PAGE */
+#contactpic > img{
+    width: 50%;
+    margin-bottom: 3%;
+    margin-top: 3%;
+    border-radius: 50px;
+    box-shadow: 2px 10px 43px 0px rgba(0,0,0,0.75);
+}
+
+/* NEWS PAGE */
+#newspic > img{
+    width: 50%;
+    margin-bottom: 3%;
+    margin-top: 3%;
+    box-shadow: 2px 10px 43px 0px rgba(0,0,0,0.75);
+    border-radius: 50px;
+}
+
+#notification_table {
+  border-top: 1px;
+  border-bottom: 1px;
+  border-color: grey;
+  max-height: 2000px;
+}
